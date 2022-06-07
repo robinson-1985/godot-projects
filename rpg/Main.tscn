@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Materiais RPG/Cenario/objetos.png" type="Texture" id=1]
 [ext_resource path="res://Materiais RPG/Cenario/solo.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Camera2D.gd" type="Script" id=4]
 [ext_resource path="res://Inimigo.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Main.gd" type="Script" id=6]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "solo.png 0"
@@ -343,6 +344,8 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
+[node name="HUD" parent="." instance=ExtResource( 7 )]
+
 [node name="solo" type="TileMap" parent="."]
 z_index = -2
 tile_set = SubResource( 1 )
@@ -359,6 +362,7 @@ position = Vector2( 100, 100 )
 script = null
 
 [node name="objetos" type="TileMap" parent="."]
+z_index = 1
 tile_set = SubResource( 3 )
 format = 1
 tile_data = PoolIntArray( -65531, 0, 0, 15, 6, 0, 16, 6, 0, 17, 6, 0, 18, 6, 0, 19, 6, 0, 20, 6, 0, 21, 6, 0, 22, 6, 0, 23, 6, 0, 31, 0, 0, 65551, 6, 0, 65552, 6, 0, 65553, 6, 0, 65554, 6, 0, 65555, 6, 0, 65556, 6, 0, 65557, 6, 0, 65558, 6, 0, 65559, 6, 0, 196648, 6, 0, 196649, 6, 0, 196650, 6, 0, 196651, 6, 0, 196652, 6, 0, 196653, 6, 0, 196654, 6, 0, 196655, 6, 0, 196656, 6, 0, 196657, 6, 0, 196658, 6, 0, 327677, 3, 0, 262203, 4, 0, 393213, 3, 0, 327682, 1, 0, 458749, 3, 0, 393218, 1, 0, 393252, 1, 0, 393253, 1, 0, 393254, 1, 0, 393255, 1, 0, 393256, 1, 0, 393257, 1, 0, 393258, 1, 0, 393259, 1, 0, 524285, 3, 0, 458754, 1, 0, 589821, 3, 0, 524290, 1, 0, 524335, 4, 0, 655357, 3, 0, 589838, 2, 0, 589846, 4, 0, 720893, 3, 0, 655387, 2, 0, 720957, 4, 0, 786437, 7, 0, 917502, 0, 0, 1048596, 6, 0, 1048597, 6, 0, 1048598, 6, 0, 1048599, 6, 0, 1048600, 6, 0, 1048601, 6, 0, 1048602, 6, 0, 1048603, 6, 0, 1048604, 6, 0, 1048605, 6, 0, 1048615, 0, 0, 1114132, 6, 0, 1114133, 6, 0, 1114134, 6, 0, 1114135, 6, 0, 1114136, 6, 0, 1114137, 6, 0, 1114138, 6, 0, 1114139, 6, 0, 1114140, 6, 0, 1114141, 6, 0, 1310717, 3, 0, 1245191, 4, 0, 1376253, 3, 0, 1310779, 2, 0, 1441789, 3, 0, 1376270, 1, 0, 1376271, 1, 0, 1376272, 1, 0, 1376273, 1, 0, 1376274, 1, 0, 1376275, 1, 0, 1376276, 1, 0, 1507325, 3, 0, 1441839, 4, 0, 1441840, 4, 0, 1441841, 4, 0, 1441842, 4, 0, 1441843, 4, 0, 1441844, 4, 0, 1572861, 3, 0, 1572903, 7, 0, 1703954, 3, 0, 1703960, 2, 0, 1703961, 2, 0, 1835006, 5, 0, 1769473, 5, 0, 1769476, 5, 0, 1769490, 3, 0, 1769496, 2, 0, 1769497, 2, 0, 1835026, 3, 0, 1835072, 6, 0, 1900554, 4, 0, 1900562, 3, 0, 1900568, 2, 0, 1900608, 6, 0, 1966098, 3, 0, 1966140, 3, 0, 1966144, 6, 0, 2031655, 0, 0, 2031680, 6, 0, 2097216, 6, 0, 2162737, 7, 0, 2162752, 6, 0, 2228228, 1, 0, 2228229, 1, 0, 2228230, 1, 0, 2228231, 1, 0, 2228232, 1, 0, 2228233, 1, 0, 2228288, 6, 0, 2293764, 1, 0, 2293765, 1, 0, 2293766, 1, 0, 2293767, 1, 0, 2293768, 1, 0, 2293769, 1, 0, 2293824, 6, 0, 2359360, 6, 0, 2424896, 6, 0, 2490400, 3, 0, 2490427, 3, 0, 2490432, 6, 0, 2555968, 6, 0, 2686972, 7, 0, 2621504, 6, 0, 2686985, 0, 0, 2686997, 0, 0, 2687040, 6, 0, 2752576, 6, 0, 2883628, 3, 0, 2883629, 3, 0, 2883630, 3, 0, 2883631, 3, 0, 2883632, 3, 0, 2883633, 3, 0, 2883634, 3, 0, 2883635, 3, 0, 2883636, 3, 0, 2949162, 3, 0, 2949163, 3, 0, 2949164, 3, 0, 2949172, 3, 0, 2949173, 3, 0, 3014688, 2, 0, 3014690, 2, 0, 3211313, 5, 0, 3211316, 5, 0, 3342340, 4, 0, 3342341, 4, 0, 3342342, 4, 0, 3342343, 4, 0, 3342344, 4, 0 )
@@ -367,4 +371,19 @@ tile_data = PoolIntArray( -65531, 0, 0, 15, 6, 0, 16, 6, 0, 17, 6, 0, 18, 6, 0, 
 current = true
 script = ExtResource( 4 )
 
+[node name="criainimigo" type="Timer" parent="."]
+autostart = true
+
+[node name="criatesouro" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="reinicio" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
 [connection signal="criabomba" from="Player" to="." method="_on_Player_criabomba"]
+[connection signal="ganhou" from="Player" to="." method="_on_Player_ganhou"]
+[connection signal="timeout" from="criainimigo" to="." method="_on_criainimigo_timeout"]
+[connection signal="timeout" from="criatesouro" to="." method="_on_criatesouro_timeout"]
+[connection signal="timeout" from="reinicio" to="." method="_on_reinicio_timeout"]
